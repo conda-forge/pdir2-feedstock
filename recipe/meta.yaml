@@ -1,7 +1,7 @@
 {% set name = "pdir2" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1.post2" %}
 {% set hash_type = "sha256" %}
-{% set hash = "70524a140de12fc767043e6b460cffc37e9e0533b450ffb43209fb91f7cce5a1" %}
+{% set hash = "f3c08df2387e6d34f2ce22be78de9dd809fcffae96a69be733a4e99a2b5d8872" %}
 
 package:
   name: {{ name }}
