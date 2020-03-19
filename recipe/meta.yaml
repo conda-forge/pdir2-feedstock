@@ -1,6 +1,5 @@
 {% set name = "pdir2" %}
 {% set version = "0.3.1.post2" %}
-{% set hash_type = "sha256" %}
 {% set hash = "f3c08df2387e6d34f2ce22be78de9dd809fcffae96a69be733a4e99a2b5d8872" %}
 
 package:
@@ -10,10 +9,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/p/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
-  number: 1000
+  number: 1001
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
