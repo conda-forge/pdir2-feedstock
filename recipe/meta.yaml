@@ -1,6 +1,6 @@
 {% set name = "pdir2" %}
-{% set version = "0.3.1.post2" %}
-{% set hash = "f3c08df2387e6d34f2ce22be78de9dd809fcffae96a69be733a4e99a2b5d8872" %}
+{% set version = "0.3.2" %}
+{% set hash = "26d7459a5d994cedbfb3f2c2460c8e1fe3741c6db9b69791409b13563b91d5e3" %}
 
 package:
   name: {{ name }}
@@ -12,11 +12,11 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 1002
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - setuptools >=20.6.8
@@ -34,7 +34,7 @@ about:
   home: http://github.com/laike9m/pdir2
   license: MIT
   license_file: LICENSE
-  summary: 'Pretty dir printing with joy'
+  summary: Pretty dir printing with joy
   license_family: MIT
 
 extra:
