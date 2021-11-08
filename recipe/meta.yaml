@@ -24,7 +24,7 @@ requirements:
   run:
     - python
     - colorama  # [win]
-    - enum34  # [py27]
+    - enum34  # [py=27]
 
 test:
   imports:
