@@ -1,6 +1,6 @@
 {% set name = "pdir2" %}
-{% set version = "0.3.2" %}
-{% set hash = "26d7459a5d994cedbfb3f2c2460c8e1fe3741c6db9b69791409b13563b91d5e3" %}
+{% set version = "0.3.3" %}
+{% set hash = "1c0c433a5e1c6f48cf98a9350331888f3da6b753f01abc326e56de7c33e511ca" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
