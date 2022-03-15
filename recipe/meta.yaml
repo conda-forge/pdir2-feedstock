@@ -1,6 +1,6 @@
 {% set name = "pdir2" %}
-{% set version = "0.3.2" %}
-{% set hash = "26d7459a5d994cedbfb3f2c2460c8e1fe3741c6db9b69791409b13563b91d5e3" %}
+{% set version = "0.3.4" %}
+{% set hash = "67ed9b97dd9fadc6eddd5d1a088c958b5464035f1f718563f8ccf98b2c116a21" %}
 
 package:
   name: {{ name }}
@@ -12,19 +12,19 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 2
+  skip: True  # [py<37]
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
+    - pdm
     - python
     - pip
-    - setuptools >=20.6.8
 
   run:
     - python
     - colorama  # [win]
-    - enum34  # [py==27]
 
 test:
   imports:
