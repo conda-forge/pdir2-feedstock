@@ -12,19 +12,19 @@ source:
   sha256: {{ hash }}
 
 build:
+  skip: True  # [py<37]
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
+    - pdm
     - python
     - pip
-    - setuptools >=20.6.8
 
   run:
     - python
     - colorama  # [win]
-    - enum34  # [py==27]
 
 test:
   imports:
