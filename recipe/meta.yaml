@@ -23,8 +23,9 @@ requirements:
     - pip
 
   run:
-    - python
     - colorama  # [win]
+    - python
+    - typing_extensions 4.2.*
 
 test:
   imports:
