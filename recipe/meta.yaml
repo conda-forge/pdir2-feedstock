@@ -18,12 +18,13 @@ build:
 
 requirements:
   host:
-    - pdm
+    - pdm-pep517
     - python
     - pip
 
   run:
     - python
+    - typing-extensions
     - colorama  # [win]
 
 test:
