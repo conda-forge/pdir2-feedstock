@@ -1,6 +1,6 @@
 {% set name = "pdir2" %}
-{% set version = "0.3.5" %}
-{% set hash = "5f559d35dd4f9a813875dd7f1e573f41ca46d18d18dd06168be2632ca03f6c7d" %}
+{% set version = "1.0.0" %}
+{% set hash = "c2d4e1df76b177ce89088f2a16dfefcdf01bc917ab80bf0b0e3408fcf4826e39" %}
 
 package:
   name: {{ name }}
@@ -18,12 +18,13 @@ build:
 
 requirements:
   host:
-    - pdm
+    - pdm-pep517
     - python
     - pip
 
   run:
     - python
+    - typing-extensions
     - colorama  # [win]
 
 test:
