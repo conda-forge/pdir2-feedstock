@@ -12,20 +12,20 @@ source:
   sha256: {{ hash }}
 
 build:
-  skip: true  # [py<37]
+  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
     - pdm-pep517
-    - python
+    - python >=3.8
     - pip
 
   run:
-    - python
+    - python >=3.8
     - typing-extensions
-    - colorama  # [win]
+    - colorama
 
 test:
   imports:
