@@ -1,6 +1,6 @@
 {% set name = "pdir2" %}
-{% set version = "1.0.0" %}
-{% set hash = "c2d4e1df76b177ce89088f2a16dfefcdf01bc917ab80bf0b0e3408fcf4826e39" %}
+{% set version = "1.1.0" %}
+{% set hash = "7d278172b32f44956c3dc750e7c6cfbe2d53098021e96e2b619bf796b469ecdd" %}
 
 package:
   name: {{ name }}
@@ -12,20 +12,20 @@ source:
   sha256: {{ hash }}
 
 build:
-  skip: true  # [py<37]
-  number: 1
+  noarch: python
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
     - pdm-pep517
-    - python
+    - python >=3.8
     - pip
 
   run:
-    - python
+    - python >=3.8
     - typing-extensions
-    - colorama  # [win]
+    - colorama
 
 test:
   imports:
