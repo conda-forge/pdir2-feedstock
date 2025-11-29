@@ -1,6 +1,6 @@
 {% set name = "pdir2" %}
-{% set version = "1.1.1" %}
-{% set hash = "e06de82af0b94764d70625fc837d02e11c85c867ae90723a61e08ecefd9d2d1f" %}
+{% set version = "1.1.2" %}
+{% set hash = "34de77cec1250e0f00a1a50c1b9252c2a1a7fe4768b8d31fb95289d9ebdde991" %}
 
 package:
   name: {{ name }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
